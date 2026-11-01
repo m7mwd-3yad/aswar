@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>شركة اسوار الكنانة للمقاولات | فوم حجري حديث وجي ار سي GRC وبديل الحجر 0501910554</title>
-  <meta name="description" content="شركة اسوار الكنانة للمقاولات العامة — متخصصون في توريد وتركيب الفوم الحجري الحديث، واجهات الجي ار سي GRC، بديل الحجر، وديكورات الواجهات الخارجية. اتصال وواتساب: 0501910554" />
-  <meta name="keywords" content="فوم حجري، واجهات جي ار سي، GRC، بديل الحجر، ديكور فوم، واجهات فلل، مقاولات حائل، السعودية، اسوار الكنانة" />
+  <title>شركة اسوار الكنانة للمقاولات | متخصصون في GRP و GRC واجهات وديكورات 0501910554</title>
+  <meta name="description" content="شركة اسوار الكنانة للمقاولات العامة — متخصصون في توريد وتركيب خامات GRP و GRC لواجهات الفلل والمباني والقصور وتكسيات معمارية فاخرة. اتصال وواتساب: 0501910554" />
+  <meta name="keywords" content="GRP, GRC, جي ار بي, جي ار سي, فايبر جلاس معماري, واجهات GRC, خرسانة مسلحة بالألياف, ديكورات واجهات, مقاولات حائل, مقاولات السعودية, اسوار الكنانة" />
 
   <!-- Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,8 +25,8 @@
   <div class="top-bar">
     <div class="container top-bar-inner">
       <div class="top-bar-location">
-        <i class="fa-solid fa-location-dot" style="color:#facc15"></i>
-        <span>المقر الرئيسي: حائل — نخدم جميع مناطق المملكة العربية السعودية</span>
+        <i class="fa-solid fa-location-dot" style="color:#d4af37"></i>
+        <span>المقر الرئيسي: حائل — تنفيذ وتوريد لكافة مناطق المملكة العربية السعودية</span>
       </div>
       <div class="top-bar-contact">
         <a href="tel:+966501910554" class="top-phone-link">
@@ -38,7 +38,7 @@
   </div>
 
   <!-- ═══════════════════════════════════════════
-       MAIN HEADER / NAVBAR
+       MAIN HEADER / NAVBAR (Clean, Balanced & Modern)
   ════════════════════════════════════════════ -->
   <header class="main-header">
     <div class="container header-inner">
@@ -46,295 +46,609 @@
         <img src="assets/logo.png" alt="شعار شركة اسوار الكنانة" class="brand-logo" />
         <div class="brand-info">
           <span class="brand-name">اسوار الكنانة للمقاولات</span>
-          <span class="brand-tagline">فوم حجري حديث • جي ار سي GRC • بديل الحجر</span>
+          <span class="brand-tagline">أعمال وتكسيات GRP & GRC</span>
         </div>
       </a>
 
-      <nav>
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav">
         <ul class="nav-menu">
-          <li><a href="#specialties" class="nav-link">خدماتنا الرئيسية</a></li>
-          <li><a href="#gallery" class="nav-link">معرض الأعمال</a></li>
-          <li><a href="#legal" class="nav-link">البيانات الرسمية</a></li>
-          <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+          <li><a href="#grp" class="nav-link">خامة GRP</a></li>
+          <li><a href="#grc" class="nav-link">خامة GRC</a></li>
+          <li><a href="#comparison" class="nav-link">مقارنة بسيطة</a></li>
+          <li><a href="#gallery" class="nav-link">صور من الموقع</a></li>
+          <li><a href="#calculator" class="nav-link highlight-nav"><i class="fa-solid fa-calculator"></i> احسب سعرك</a></li>
         </ul>
       </nav>
 
+      <!-- CTA Buttons & Mobile Hamburger -->
       <div class="header-cta-group">
         <a href="tel:+966501910554" class="btn-header-call" title="اتصال مباشر">
           <i class="fa-solid fa-phone"></i>
-          <bdi class="phone-num">+966 50 191 0554</bdi>
+          <bdi class="phone-num">0501910554</bdi>
         </a>
-        <a href="https://wa.me/966501910554" target="_blank" class="btn-header-wa">
+        <a href="https://wa.me/966501910554?text=مرحباً شركة اسوار الكنانة، أرغب باستفسار وعرض سعر لأعمال GRP و GRC" target="_blank" class="btn-header-wa">
           <i class="fa-brands fa-whatsapp"></i>
           <span>واتساب فوري</span>
         </a>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="فتح القائمة">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </div>
   </header>
 
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-overlay" id="mobile-overlay"></div>
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-link">
+        <img src="assets/logo.png" alt="اسوار الكنانة" class="brand-logo" />
+        <div class="brand-info">
+          <span class="brand-name">اسوار الكنانة</span>
+          <span class="brand-tagline">GRP & GRC</span>
+        </div>
+      </div>
+      <button class="mobile-drawer-close" id="mobile-drawer-close">&times;</button>
+    </div>
+    <ul class="mobile-menu-list">
+      <li><a href="#grp" class="mobile-menu-link"><i class="fa-solid fa-layer-group"></i> خامة GRP (فايبر جلاس)</a></li>
+      <li><a href="#grc" class="mobile-menu-link"><i class="fa-solid fa-building-columns"></i> خامة GRC (خرسانة مسلحة)</a></li>
+      <li><a href="#comparison" class="mobile-menu-link"><i class="fa-solid fa-scale-balanced"></i> إيه الفرق بينهم؟</a></li>
+      <li><a href="#gallery" class="mobile-menu-link"><i class="fa-solid fa-camera"></i> صور أعمال حقيقية</a></li>
+      <li><a href="#calculator" class="mobile-menu-link highlight-mobile"><i class="fa-solid fa-calculator"></i> احسب واطلب سعرك فوراً</a></li>
+      <li><a href="#contact" class="mobile-menu-link"><i class="fa-solid fa-phone-volume"></i> تواصل معنا</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <a href="https://wa.me/966501910554" target="_blank" class="btn-drawer-wa">
+        <i class="fa-brands fa-whatsapp"></i> تواصل واتساب فوري
+      </a>
+      <a href="tel:+966501910554" class="btn-drawer-call">
+        <i class="fa-solid fa-phone"></i> اتصال هاتفي مباشر
+      </a>
+    </div>
+  </div>
+
   <!-- ═══════════════════════════════════════════
-       HERO BANNER
+       HERO BANNER (Realistic, Clean, Fast)
   ════════════════════════════════════════════ -->
   <section class="hero-section">
     <div class="container hero-content">
       <div class="hero-badge">
-        <i class="fa-solid fa-shield-check"></i>
-        <span>شركة مرخصة رسمياً — سجل تجاري: 3133277033</span>
+        <i class="fa-solid fa-shield-halved"></i>
+        <span>شركة معتمدة رسمياً — سجل تجاري: 3133277033</span>
       </div>
 
       <h1 class="hero-title">
-        متخصصون في <span>الفوم الحجري الحديث</span><br />
-        وواجهات <span>الجي ار سي (GRC)</span> وبديل الحجر
+        تنفيذ وتوريد واجهات <span>GRP</span> و <span>GRC</span><br />
+        بأعلى معايير المتانة والشكل العصري
       </h1>
 
       <p class="hero-subtitle">
-        تنفيذ وتشطيب أرقى واجهات الفلل والقصور والمشاريع التجارية بأعلى معايير الجودة والسرعة وأفضل الأسعار في المملكة.
+        موقعك البسيط للحصول على المعلومة من أرض الواقع مباشرة: مواصفات واضحة، صور من مواقع العمل، وتسعير فوري لمشروعك عبر الواتساب في دقيقة واحدة.
       </p>
 
+      <!-- ══════ HERO DUAL SELECTOR CARDS ══════ -->
+      <div class="hero-dual-selector">
+        <!-- GRP Card -->
+        <a href="#grp" class="hero-material-card card-grp">
+          <div class="material-card-icon">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <div class="material-card-content">
+            <div class="material-tag">خفيف الوزن ومقاوم للرطوبة 100%</div>
+            <h3>خامة جي ار بي (GRP)</h3>
+            <p>الفايبر جلاس المسلح بالألياف — الأنسب للواجهات الانسيابية، التكسيات الخفيفة والمظلات بدون أي وزن على المبنى.</p>
+            <span class="material-card-btn">تعرف على المواصفات والأسعار <i class="fa-solid fa-arrow-left"></i></span>
+          </div>
+        </a>
+
+        <!-- GRC Card -->
+        <a href="#grc" class="hero-material-card card-grc">
+          <div class="material-card-icon">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+          <div class="material-card-content">
+            <div class="material-tag">صلابة صخرية ومقاوم للحريق</div>
+            <h3>خامة جي ار سي (GRC)</h3>
+            <p>الخرسانة المسلحة بالألياف — فخامة الحجر لواجهات الفلل والقصور، الزخارف والكرانيش والأعمدة المعمارية.</p>
+            <span class="material-card-btn">تعرف على المواصفات والأسعار <i class="fa-solid fa-arrow-left"></i></span>
+          </div>
+        </a>
+      </div>
+
       <div class="hero-actions">
-        <a href="https://wa.me/966501910554?text=مرحباً شركة اسوار الكنانة، أرغب بالاستفسار عن خدمات الواجهات" target="_blank" class="btn-hero-wa">
+        <a href="#calculator" class="btn-hero-calc">
+          <i class="fa-solid fa-calculator"></i>
+          <span>احسب واطلب سعرك فوراً</span>
+        </a>
+        <a href="https://wa.me/966501910554?text=مرحباً شركة اسوار الكنانة، أرغب باستفسار سريع عن الـ GRP والـ GRC" target="_blank" class="btn-hero-wa">
           <i class="fa-brands fa-whatsapp"></i>
           <span>تواصل واتساب مباشر</span>
         </a>
         <a href="tel:+966501910554" class="btn-hero-call">
           <i class="fa-solid fa-phone"></i>
-          <bdi class="phone-num">+966 50 191 0554</bdi>
+          <bdi class="phone-num">0501910554</bdi>
         </a>
       </div>
 
       <div class="hero-quick-features">
-        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> عزل حراري ومائي فائق</div>
-        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> مقاوم للحرائق والرطوبة</div>
-        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> سرعة قياسية في التركيب</div>
-        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> ضمان رسمي على الأعمال</div>
+        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> ضمان رسمي معتمد على الأعمال</div>
+        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> مقاومة تامة للرطوبة والشمس والحرائق</div>
+        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> دقة وسرعة في التصنيع والتركيب الهندسي</div>
+        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> خدمة وتوريد لكافة مناطق المملكة</div>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════
-       THE 4 CORE SPECIALTIES
+       SECTION 1: GRP SPOTLIGHT (Specs, Real Photos, Video, Quote)
   ════════════════════════════════════════════ -->
-  <section class="section" id="specialties">
+  <section class="section section-grp" id="grp">
     <div class="container">
       <div class="section-header">
-        <span class="section-badge">تخصصاتنا الأساسية</span>
-        <h2 class="section-title">حلول الواجهات الخارجية المتطورة</h2>
-        <p class="section-desc">تركيزنا التام على 4 تخصصات معمارية حديثة تجمع بين الفخامة والمتانة والاقتصاد</p>
+        <span class="section-badge badge-grp"><i class="fa-solid fa-layer-group"></i> الخامة الأولى: الفايبر جلاس المعماري</span>
+        <h2 class="section-title">خامة جي ار بي GRP — خفة وزن ومقاومة مطلقة</h2>
+        <p class="section-desc">ما هو ببساطة؟ بلاستيك مقوى بالألياف الزجاجية عالية الكثافة، يجمع بين قوة التحمل العالية وخفة الوزن الاستثنائية ومقاومة المياه بنسبة 100%.</p>
       </div>
 
-      <div class="services-grid-4">
-
-        <!-- 1. الفوم الحجري الحديث -->
-        <article class="service-box">
-          <div class="service-box-img">
-            <img src="assets/images/real_foam_1.jpg" alt="الفوم الحجري الحديث للواجهات" loading="lazy" />
-            <span class="service-box-tag">الأكثر طلباً واقتصاداً</span>
-          </div>
-          <div class="service-box-body">
-            <h3 class="service-box-title">1. الفوم الحجري الحديث</h3>
-            <p class="service-box-text">
-              الحل العصري الأمثل لتشطيب الواجهات الخارجية بمظهر الحجر الطبيعي الفاخر، بوزن خفيف جداً يقلل الأحمال على المبنى مع عزل حراري ومقاومة تامة للشمس والرطوبة.
-            </p>
-            <ul class="service-box-points">
-              <li><i class="fa-solid fa-check-circle"></i> خفيف الوزن وسريع التركيب</li>
-              <li><i class="fa-solid fa-check-circle"></i> عازل ممتاز للحرارة والصوت</li>
-              <li><i class="fa-solid fa-check-circle"></i> تكلفة اقتصادية مقارنة بالحجر</li>
-            </ul>
-            <div class="service-box-action">
-              <a href="https://wa.me/966501910554?text=أرغب بعرض سعر للفوم الحجري الحديث" target="_blank" class="btn-card-wa">
-                <i class="fa-brands fa-whatsapp"></i> واتساب
-              </a>
-              <a href="tel:+966501910554" class="btn-card-call" title="اتصل الآن">
-                <i class="fa-solid fa-phone"></i> اتصال
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 2. واجهات الجي ار سي GRC -->
-        <article class="service-box">
-          <div class="service-box-img">
-            <img src="assets/images/real_grc_2.jpg" alt="واجهات جي ار سي GRC" loading="lazy" />
-            <span class="service-box-tag">متانة معمارية فائقة</span>
-          </div>
-          <div class="service-box-body">
-            <h3 class="service-box-title">2. واجهات الجي ار سي (GRC)</h3>
-            <p class="service-box-text">
-              الخرسانة المسلحة بالألياف الزجاجية — تمنحك إمكانية تنفيذ أرقى الزخارف الإسلامية والكلاسيكية والمودرن، وأعمدة وتيجان الواجهات بصلابة فائقة تقاوم أقصى تقلبات الجو.
-            </p>
-            <ul class="service-box-points">
-              <li><i class="fa-solid fa-check-circle"></i> غير قابل للاشتعال ومضاد للتآكل</li>
-              <li><i class="fa-solid fa-check-circle"></i> تصاميم معمارية وزخارف لا محدودة</li>
-              <li><i class="fa-solid fa-check-circle"></i> عمر افتراضي يتجاوز 50 عاماً</li>
-            </ul>
-            <div class="service-box-action">
-              <a href="https://wa.me/966501910554?text=أرغب بعرض سعر لواجهات الجي ار سي GRC" target="_blank" class="btn-card-wa">
-                <i class="fa-brands fa-whatsapp"></i> واتساب
-              </a>
-              <a href="tel:+966501910554" class="btn-card-call" title="اتصل الآن">
-                <i class="fa-solid fa-phone"></i> اتصال
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 3. بديل الحجر -->
-        <article class="service-box">
-          <div class="service-box-img">
-            <img src="assets/images/stone_alt_1.jpg" alt="بديل الحجر للواجهات" loading="lazy" />
-            <span class="service-box-tag">مظهر طبيعي جذاب</span>
-          </div>
-          <div class="service-box-body">
-            <h3 class="service-box-title">3. بديل الحجر الطبيعي</h3>
-            <p class="service-box-text">
-              تكسيات واجهات بديل الحجر الخارجي والداخلي بأشكال وألوان وتدرجات حجرية مذهلة تضفي فخامة استثنائية لمداخل الفلل والمنازل والأسوار بدون أوزان ثقيلة.
-            </p>
-            <ul class="service-box-points">
-              <li><i class="fa-solid fa-check-circle"></i> ألوان وتدرجات حجرية متعددة</li>
-              <li><i class="fa-solid fa-check-circle"></i> لا يمتص الماء ومقاوم للأملاح</li>
-              <li><i class="fa-solid fa-check-circle"></i> سهولة في الصيانة والتنظيف</li>
-            </ul>
-            <div class="service-box-action">
-              <a href="https://wa.me/966501910554?text=أرغب بعرض سعر لبديل الحجر" target="_blank" class="btn-card-wa">
-                <i class="fa-brands fa-whatsapp"></i> واتساب
-              </a>
-              <a href="tel:+966501910554" class="btn-card-call" title="اتصل الآن">
-                <i class="fa-solid fa-phone"></i> اتصال
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 4. ديكورات وتيجان وبراويز الواجهات -->
-        <article class="service-box">
-          <div class="service-box-img">
-            <img src="assets/images/facade_decor_1.jpg" alt="ديكورات وتيجان وبراويز الواجهات" loading="lazy" />
-            <span class="service-box-tag">لمسات جمالية فاخرة</span>
-          </div>
-          <div class="service-box-body">
-            <h3 class="service-box-title">4. ديكورات وبراويز وتيجان</h3>
-            <p class="service-box-text">
-              تفصيل وتركيب إطارات النوافذ (براويز)، الكرانيش، الكوابيل، مشربيات، وزرات وقواعد وتيجان الأعمدة التي تحول أي واجهة عادية إلى تحفة معمارية متناسقة.
-            </p>
-            <ul class="service-box-points">
-              <li><i class="fa-solid fa-check-circle"></i> دقة متناهية في التفاصيل الهندسية</li>
-              <li><i class="fa-solid fa-check-circle"></i> متاح بخامات الفوم المعالج والـ GRC</li>
-              <li><i class="fa-solid fa-check-circle"></i> تثبيت هندسي آمن ومضمون</li>
-            </ul>
-            <div class="service-box-action">
-              <a href="https://wa.me/966501910554?text=أرغب باستشارة وديكورات براويز وتيجان" target="_blank" class="btn-card-wa">
-                <i class="fa-brands fa-whatsapp"></i> واتساب
-              </a>
-              <a href="tel:+966501910554" class="btn-card-call" title="اتصل الآن">
-                <i class="fa-solid fa-phone"></i> اتصال
-              </a>
-            </div>
-          </div>
-        </article>
-
+      <!-- Quick Layman Summary Banner -->
+      <div class="layman-box grp-layman">
+        <div class="layman-icon"><i class="fa-solid fa-lightbulb"></i></div>
+        <div class="layman-text">
+          <strong>معلومة مباشرة وبدون تعقيد:</strong>
+          إذا كان عندك واجهة أو سقف خايف تحمّل عليه وزن ثقيل، أو بتشطب مكان فيه رطوبة أو مياه عالية، أو عايز أشكال عصرية انسيابية — فخامة الـ <strong>GRP</strong> هي الحل الأنسب لأنها لا تصدأ ولا تتأثر بالماء إطلاقاً ووزنها خفيف جداً.
+        </div>
       </div>
+
+      <!-- GRP Key Specs Grid -->
+      <h3 class="subsection-title"><i class="fa-solid fa-sliders"></i> مواصفات خامة GRP في 6 نقاط سريعة</h3>
+      <div class="specs-grid">
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fa-solid fa-feather-pointed"></i></div>
+          <div class="spec-info">
+            <h4>خفيف الوزن جداً</h4>
+            <p>أخف بنسبة تصل لـ 70% مقارنة بالخرسانة والحجر، مناسب جداً للواجهات التي لا تتحمل أحمالاً ثقيلة.</p>
+          </div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fa-solid fa-droplet-slash"></i></div>
+          <div class="spec-info">
+            <h4>عازل ومقاوم للماء 100%</h4>
+            <p>مقاومة تامة للأمطار والرطوبة الساحلية والكيماويات، لا يمتص الرطوبة ولا يصدأ نهائياً.</p>
+          </div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fa-solid fa-shapes"></i></div>
+          <div class="spec-info">
+            <h4>تشكيل انسيابي وعصري</h4>
+            <p>مرونة عالية في تنفيذ الواجهات المودرن المنحنية واللوحات التكسية الكبيرة بدقة عالية وبدون فواصل مزعجة.</p>
+          </div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fa-solid fa-sun"></i></div>
+          <div class="spec-info">
+            <h4>مقاومة لأشعة الشمس والحرارة</h4>
+            <p>معالج ضد الأشعة فوق البنفسجية UV ليتحمل مناخ وأشعة الشمس في المملكة مع الحفاظ على لونه وصلابته.</p>
+          </div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+          <div class="spec-info">
+            <h4>عمر طويل بدون صيانة</h4>
+            <p>لا يتشقق ولا يتفتت مع مرور السنين، مما يوفر تكاليف الصيانة الدورية بشكل كبير.</p>
+          </div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fa-solid fa-paint-roller"></i></div>
+          <div class="spec-info">
+            <h4>تشطيب ناعم وألوان مخصصة</h4>
+            <p>يمكن تصنيعه وتشطيبه بأي ملمس ولون تريده ليتماشى تماماً مع ديكور واجهتك أو منزلك.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRP Real Photos & Video Showcase -->
+      <div class="media-showcase-wrap">
+        <h3 class="subsection-title"><i class="fa-solid fa-camera"></i> صور حقيقية وفيديو توضيحي لأعمال GRP</h3>
+        <div class="media-grid-3">
+          <!-- Real Photo 1 -->
+          <div class="media-card" data-img="assets/images/real_site_facade_1.jpg" data-title="تكسية واجهة معمارية حقيقية بالـ GRP">
+            <img src="assets/images/real_site_facade_1.jpg" alt="تكسية واجهة GRP من موقع العمل" loading="lazy" />
+            <div class="media-overlay">
+              <span class="media-tag">صورة من موقع العمل</span>
+              <h4>تكسيات واجهات مودرن حقيقية بالـ GRP</h4>
+              <p>تشطيب ناعم وانسيابي مقاوم للحرارة والرطوبة</p>
+              <button class="btn-media-action btn-open-gallery" data-img="assets/images/real_site_facade_1.jpg" data-title="تكسية واجهة GRP من موقع العمل"><i class="fa-solid fa-expand"></i> تكبير الصورة</button>
+            </div>
+          </div>
+
+          <!-- Real Photo 2 -->
+          <div class="media-card" data-img="assets/images/real_site_after.jpg" data-title="واجهة فيلا مشطبة بالكامل بألواح وتكسيات GRP">
+            <img src="assets/images/real_site_after.jpg" alt="واجهة فيلا بعد التشطيب بالـ GRP" loading="lazy" />
+            <div class="media-overlay">
+              <span class="media-tag">صورة واقعية مكتملة</span>
+              <h4>واجهة بعد التشطيب الكامل بالـ GRP</h4>
+              <p>مظهر هندسي راقي بوزن خفيف وتثبيت آمن ومحكم</p>
+              <button class="btn-media-action btn-open-gallery" data-img="assets/images/real_site_after.jpg" data-title="واجهة فيلا بعد التشطيب بالـ GRP"><i class="fa-solid fa-expand"></i> تكبير الصورة</button>
+            </div>
+          </div>
+
+          <!-- Video Showcase Card for GRP -->
+          <div class="video-preview-card" id="btn-play-grp-video">
+            <div class="video-preview-thumb">
+              <img src="assets/images/real_site_facade_1.jpg" alt="فيديو GRP" />
+              <div class="video-play-pulse">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="video-badge"><i class="fa-solid fa-video"></i> فيديو توضيحي من الميدان</span>
+            </div>
+            <div class="video-preview-info">
+              <h4>شاهد فيديو: خامة ومراحل تركيب GRP</h4>
+              <p>فيديو عملي يوضح خفة وزن ألواح الفايبر جلاس وسهولة رفعها وتثبيتها الميكانيكي على الواجهات.</p>
+              <span class="btn-watch-video"><i class="fa-solid fa-circle-play"></i> تشغيل الفيديو الآن</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instant GRP Quote CTA Bar -->
+      <div class="material-cta-bar">
+        <div class="material-cta-text">
+          <h3>هل تريد تنفيذ تكسيات أو أعمال <strong>جي ار بي (GRP)</strong>؟</h3>
+          <p>أرسل لنا مخططك أو مساحتك وسنزودك بعرض سعر رسمي ومقايسة تفصيلية فوراً.</p>
+        </div>
+        <div class="material-cta-btns">
+          <a href="https://wa.me/966501910554?text=مرحباً شركة اسوار الكنانة، أرغب بطلب عرض سعر لأعمال الـ GRP (جي ار بي)" target="_blank" class="btn-cta-green">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>طلب سعر GRP عبر واتساب</span>
+          </a>
+          <a href="tel:+966501910554" class="btn-cta-phone">
+            <i class="fa-solid fa-phone"></i>
+            <bdi class="phone-num">0501910554</bdi>
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════
-       REAL PROJECT GALLERY
+       SECTION 2: GRC SPOTLIGHT (Specs, Real Photos, Video, Quote)
+  ════════════════════════════════════════════ -->
+  <section class="section section-grc" id="grc">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge badge-grc"><i class="fa-solid fa-building-columns"></i> الخامة الثانية: الخرسانة المسلحة بالألياف</span>
+        <h2 class="section-title">خامة جي ار سي GRC — فخامة الحجر وصلابة العمر</h2>
+        <p class="section-desc">ما هو ببساطة؟ خرسانة إسمنتية مسلحة بألياف زجاجية قوية، تمنحك نفس هيبة وفخامة الحجر الطبيعي والرخام ولكن بوزن أخف ومقاومة كاملة للشروخ والحرائق.</p>
+      </div>
+
+      <!-- Quick Layman Summary Banner -->
+      <div class="layman-box grc-layman">
+        <div class="layman-icon"><i class="fa-solid fa-lightbulb"></i></div>
+        <div class="layman-text">
+          <strong>معلومة مباشرة وبدون تعقيد:</strong>
+          إذا كنت تريد تشطيب واجهة فيلا فخمة بلمسة حجرية، أو عايز أعمدة وتيجان وبوابات فخمة، أو كرانيش وبراويز نوافذ تدوم 50 سنة وأكتر من غير ما تتشقق أو تسقط — فالـ <strong>GRC</strong> هو الاختيار الأساسي والأفضل لواجهات الفلل والقصور.
+        </div>
+      </div>
+
+      <!-- GRC Key Specs Grid -->
+      <h3 class="subsection-title"><i class="fa-solid fa-sliders"></i> مواصفات خامة GRC في 6 نقاط سريعة</h3>
+      <div class="specs-grid">
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="spec-info">
+            <h4>صلابة صخرية ومقاومة للكسر</h4>
+            <p>ألياف الزجاج تمنح الخرسانة قوة تماسك تمنع التصدعات وتتحمل الصدمات وعوامل التمدد والانكماش.</p>
+          </div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fa-solid fa-fire-burner"></i></div>
+          <div class="spec-info">
+            <h4>مقاومة مطلقة للحريق (Class 0)</h4>
+            <p>مادة إسمنتية غير قابلة للاشتعال تماماً، توفر أعلى درجات السلامة والأمان للمباني والفلل السكنية.</p>
+          </div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fa-solid fa-gem"></i></div>
+          <div class="spec-info">
+            <h4>دقة خرافية في الزخارف والكرانيش</h4>
+            <p>تُصب في قوالب لإنتاج أدق التفاصيل المعمارية الإسلامية والكلاسيكية وتيجان الأعمدة والبراويز.</p>
+          </div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+          <div class="spec-info">
+            <h4>أخف بـ 50% من الحجر الطبيعي</h4>
+            <p>تمنحك نفس هيبة الحجر الطبيعي الصلب مع تقليل الحمل على الأساسات، وتُثبت بحديد مجلفن هندسي آمن.</p>
+          </div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fa-solid fa-hourglass-start"></i></div>
+          <div class="spec-info">
+            <h4>عمر افتراضي أكثر من 50 عاماً</h4>
+            <p>استثمار دائم يدوم لعقود بدون شروخ أو تساقط، ويتحمل الرياح والأمطار وتقلبات الطقس في المملكة.</p>
+          </div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fa-solid fa-brush"></i></div>
+          <div class="spec-info">
+            <h4>ملمس حجري وألوان متعددة</h4>
+            <p>تتوفر بألوان بيج وأبيض ورمادي مع ملمس الحجر الطبيعي أو الرخامي الفاخر حسب رغبتك.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRC Real Photos & Video Showcase -->
+      <div class="media-showcase-wrap">
+        <h3 class="subsection-title"><i class="fa-solid fa-camera"></i> صور حقيقية وفيديو توضيحي لأعمال GRC</h3>
+        <div class="media-grid-3">
+          <!-- Real Photo 1 -->
+          <div class="media-card" data-img="assets/images/real_site_columns.jpg" data-title="أعمدة وتيجان وبوابات GRC حقيقية من موقع العمل">
+            <img src="assets/images/real_site_columns.jpg" alt="أعمدة وتيجان GRC حقيقية" loading="lazy" />
+            <div class="media-overlay">
+              <span class="media-tag">صورة من موقع العمل</span>
+              <h4>أعمدة وتيجان وبوابات GRC واقعية</h4>
+              <p>صلابة صخرية ودقة تفاصيل من أرض الواقع</p>
+              <button class="btn-media-action btn-open-gallery" data-img="assets/images/real_site_columns.jpg" data-title="أعمدة وتيجان GRC حقيقية"><i class="fa-solid fa-expand"></i> تكبير الصورة</button>
+            </div>
+          </div>
+
+          <!-- Real Photo 2 -->
+          <div class="media-card" data-img="assets/images/real_grc_2.jpg" data-title="واجهة فيلا كاملة بكرانيش وبراويز GRC">
+            <img src="assets/images/real_grc_2.jpg" alt="واجهة فيلا GRC حقيقية" loading="lazy" />
+            <div class="media-overlay">
+              <span class="media-tag">صورة واقعية</span>
+              <h4>واجهة فيلا متكاملة بكرانيش GRC</h4>
+              <p>براويز نوافذ وكرانيش خارجية كلاسيكية مقاومة للشمس</p>
+              <button class="btn-media-action btn-open-gallery" data-img="assets/images/real_grc_2.jpg" data-title="واجهة فيلا GRC حقيقية"><i class="fa-solid fa-expand"></i> تكبير الصورة</button>
+            </div>
+          </div>
+
+          <!-- Video Showcase Card for GRC -->
+          <div class="video-preview-card" id="btn-play-grc-video">
+            <div class="video-preview-thumb">
+              <img src="assets/images/real_site_columns.jpg" alt="فيديو GRC" />
+              <div class="video-play-pulse">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="video-badge"><i class="fa-solid fa-video"></i> فيديو توضيحي من الميدان</span>
+            </div>
+            <div class="video-preview-info">
+              <h4>شاهد فيديو: طريقة تركيب وزخارف GRC</h4>
+              <p>فيديو واقعي يوضح مراحل تركيب الألواح والكرانيش بالهياكل الحديدية واللحام المجلفن لضمان أعلى ثبات.</p>
+              <span class="btn-watch-video"><i class="fa-solid fa-circle-play"></i> تشغيل الفيديو الآن</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instant GRC Quote CTA Bar -->
+      <div class="material-cta-bar">
+        <div class="material-cta-text">
+          <h3>هل تريد تشطيب واجهة فيلتك أو مشروعك بـ <strong>جي ار سي (GRC)</strong>؟</h3>
+          <p>فريقنا الهندسي جاهز لمعاينة المخطط وحساب الأمتار وإعطائك أفضل سعر في السوق.</p>
+        </div>
+        <div class="material-cta-btns">
+          <a href="https://wa.me/966501910554?text=مرحباً شركة اسوار الكنانة، أرغب بطلب عرض سعر لأعمال الـ GRC (جي ار سي)" target="_blank" class="btn-cta-green">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>طلب سعر GRC عبر واتساب</span>
+          </a>
+          <a href="tel:+966501910554" class="btn-cta-phone">
+            <i class="fa-solid fa-phone"></i>
+            <bdi class="phone-num">0501910554</bdi>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 3: CREATIVE COMPARISON (GRP vs GRC)
+  ════════════════════════════════════════════ -->
+  <section class="section section-comparison" id="comparison">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-scale-balanced"></i> دليل الاختيار السريع للعميل</span>
+        <h2 class="section-title">إيه الفرق بين GRP و GRC؟ واختار إيه لمشروعي؟</h2>
+        <p class="section-desc">مقارنة واضحة وبسيطة من غير مصطلحات معقدة علشان تفهم الفرق وتختار الأنسب لبيتك فوراً.</p>
+      </div>
+
+      <div class="comparison-table-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th class="col-feature">وجه المقارنة</th>
+              <th class="col-grp"><i class="fa-solid fa-layer-group"></i> جي ار بي (GRP)</th>
+              <th class="col-grc"><i class="fa-solid fa-building-columns"></i> جي ار سي (GRC)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="feature-title"><strong>الخامة الأساسية</strong></td>
+              <td>ألياف زجاجية مدمجة مع راتنجات بوليمرية (فايبر جلاس خالص)</td>
+              <td>إسمنت بورتلاندي + ركام ناعم + ألياف زجاجية مقاومة للقلويات</td>
+            </tr>
+            <tr>
+              <td class="feature-title"><strong>الوزن على المبنى</strong></td>
+              <td><span class="badge-win">خفيف جداً</span> (10 - 15 كجم/م²) لا يشكل أي حمل على الواجهة</td>
+              <td><span class="badge-good">متوسط</span> (35 - 45 كجم/م²) أخف بـ 50% من الحجر الطبيعي</td>
+            </tr>
+            <tr>
+              <td class="feature-title"><strong>أفضل استخدام له</strong></td>
+              <td><strong>الواجهات المودرن الانسيابية</strong>، التكسيات الخفيفة، المظلات، وأماكن الرطوبة</td>
+              <td><strong>واجهات الفلل والقصور</strong>، الكرانيش، تيجان الأعمدة، البراويز، والمشربيات</td>
+            </tr>
+            <tr>
+              <td class="feature-title"><strong>مقاومة الماء والرطوبة</strong></td>
+              <td><span class="badge-win">100% عازل تام</span> ومقاوم للغمر والصدأ والكيماويات</td>
+              <td><span class="badge-good">مقاوم ممتاز</span> للأمطار وعوامل الجو الخارجية</td>
+            </tr>
+            <tr>
+              <td class="feature-title"><strong>مقاومة الحريق والحرارة</strong></td>
+              <td>مقاوم للحرارة، ويتوفر بأنواع مقاومة للاشتعال</td>
+              <td><span class="badge-win">غير قابل للاشتعال كلياً</span> (Class 0 أعلى تصنيف أمان)</td>
+            </tr>
+            <tr>
+              <td class="feature-title"><strong>المظهر النهائي</strong></td>
+              <td>سطح أملس وعصري خفيف</td>
+              <td>فخامة وملمس الحجر الطبيعي الصلب</td>
+            </tr>
+            <tr>
+              <td class="feature-title"><strong>العمر الافتراضي</strong></td>
+              <td>أكثر من 30 - 40 عاماً بدون تآكل</td>
+              <td>أكثر من 50 عاماً مع ثبات المتانة</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Simple Decision Helper Cards -->
+      <div class="decision-helper-grid">
+        <div class="decision-card select-grp">
+          <div class="decision-header">
+            <i class="fa-solid fa-circle-check"></i>
+            <h4>متى تختار خامة جي ار بي GRP؟</h4>
+          </div>
+          <ul>
+            <li>لو واجهتك أو المبنى لا يتحمل أوزاناً ثقيلة وعايز حل خفيف وآمن.</li>
+            <li>لو واجهتك فيها تكسيات منحنية وأشكال انسيابية عصرية (مودرن).</li>
+            <li>لو بتشطب مكان فيه رطوبة أو مياه مباشرة ومحتاج عازل 100%.</li>
+          </ul>
+          <a href="https://wa.me/966501910554?text=مرحباً، بعد قراءة المقارنة يبدو أن خامة الـ GRP هي الأنسب لمشروعي، أرغب بعرض سعر" target="_blank" class="btn-decision">
+            <i class="fa-brands fa-whatsapp"></i> اخترت GRP — اطلب السعر الآن
+          </a>
+        </div>
+
+        <div class="decision-card select-grc">
+          <div class="decision-header">
+            <i class="fa-solid fa-circle-check"></i>
+            <h4>متى تختار خامة جي ار سي GRC؟</h4>
+          </div>
+          <ul>
+            <li>لو عايز تشطيب واجهة فيلا كاملة بفخامة الحجر والرخام الطبيعي.</li>
+            <li>لو عايز زخارف إسلامية أو كلاسيكية بارزة وتيجان أعمدة فخمة.</li>
+            <li>لو محتاج أعلى درجات مقاومة الحريق والصلابة الصخرية الدائمة.</li>
+          </ul>
+          <a href="https://wa.me/966501910554?text=مرحباً، بعد قراءة المقارنة يبدو أن خامة الـ GRC هي الأنسب لمشروعي، أرغب بعرض سعر" target="_blank" class="btn-decision">
+            <i class="fa-brands fa-whatsapp"></i> اخترت GRC — اطلب السعر الآن
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 4: REAL PROJECTS GALLERY (All Real Site Photos)
   ════════════════════════════════════════════ -->
   <section class="section section-alt" id="gallery">
     <div class="container">
       <div class="section-header">
-        <span class="section-badge">معرض المشاريع الواقعية</span>
-        <h2 class="section-title">نماذج من أعمالنا المنفذة</h2>
-        <p class="section-desc">مجموعة مختارة من مشاريع الفوم الحجري، الجي ار سي، وبديل الحجر</p>
+        <span class="section-badge"><i class="fa-solid fa-camera-retro"></i> صور حقيقية 100% من أرض الواقع</span>
+        <h2 class="section-title">نماذج واقعية من مشاريعنا المنفذة بالمملكة</h2>
+        <p class="section-desc">صور موثقة من مواقع العمل الفعلية لأعمال تكسيات GRP وواجهات وأعمدة وزخارف GRC.</p>
       </div>
 
       <!-- Filter Controls -->
       <div class="gallery-filter">
-        <button class="filter-btn active" data-filter="all">جميع الأعمال</button>
-        <button class="filter-btn" data-filter="foam">فوم حجري حديث</button>
-        <button class="filter-btn" data-filter="grc">واجهات GRC</button>
-        <button class="filter-btn" data-filter="stone">بديل الحجر</button>
-        <button class="filter-btn" data-filter="decor">ديكورات وتيجان</button>
+        <button class="filter-btn active" data-filter="all">جميع الأعمال الواقعية</button>
+        <button class="filter-btn" data-filter="grp"><i class="fa-solid fa-layer-group"></i> أعمال GRP</button>
+        <button class="filter-btn" data-filter="grc"><i class="fa-solid fa-building-columns"></i> واجهات GRC</button>
+        <button class="filter-btn" data-filter="columns">أعمدة وبوابات</button>
       </div>
 
       <div class="gallery-grid" id="gallery-container">
 
-        <!-- 1 -->
-        <div class="gallery-item" data-category="foam" data-img="assets/images/real_foam_1.jpg" data-title="واجهة فوم حجري حديث - فيلا خاصة">
-          <img src="assets/images/real_foam_1.jpg" alt="واجهة فوم حجري حديث" loading="lazy" />
+        <!-- 1: Real GRP Facade -->
+        <div class="gallery-item" data-category="grp" data-img="assets/images/real_site_facade_1.jpg" data-title="تكسية واجهة معمارية مودرن بخامة GRP">
+          <img src="assets/images/real_site_facade_1.jpg" alt="تكسية واجهة GRP من الموقع" loading="lazy" />
           <div class="gallery-overlay">
-            <span class="gallery-badge">فوم حجري حديث</span>
-            <h4 class="gallery-title">واجهة فوم حجري حديث متكاملة</h4>
-            <span class="gallery-cta"><i class="fa-brands fa-whatsapp"></i> اطلب مثل هذا التصميم</span>
+            <span class="gallery-badge badge-grp">جي ار بي GRP واقعي</span>
+            <h4 class="gallery-title">تكسية واجهة معمارية مودرن بخامة GRP</h4>
+            <span class="gallery-cta"><i class="fa-brands fa-whatsapp"></i> اطلب مثل هذا الشغل</span>
           </div>
         </div>
 
-        <!-- 2 -->
-        <div class="gallery-item" data-category="grc" data-img="assets/images/real_grc_2.jpg" data-title="تشطيب واجهة جي ار سي وزخارف وأعمدة">
-          <img src="assets/images/real_grc_2.jpg" alt="واجهة جي ار سي وأعمدة" loading="lazy" />
+        <!-- 2: Real GRC Columns & Portico -->
+        <div class="gallery-item" data-category="grc columns" data-img="assets/images/real_site_columns.jpg" data-title="أعمدة وتيجان وبوابات قصر بخامة GRC">
+          <img src="assets/images/real_site_columns.jpg" alt="أعمدة وتيجان GRC من الموقع" loading="lazy" />
           <div class="gallery-overlay">
-            <span class="gallery-badge">جي ار سي GRC</span>
-            <h4 class="gallery-title">واجهة قصر بتفاصيل جي ار سي فاخرة</h4>
-            <span class="gallery-cta"><i class="fa-brands fa-whatsapp"></i> اطلب مثل هذا التصميم</span>
+            <span class="gallery-badge badge-grc">جي ار سي GRC واقعي</span>
+            <h4 class="gallery-title">أعمدة وتيجان وبوابات قصر بخامة GRC</h4>
+            <span class="gallery-cta"><i class="fa-brands fa-whatsapp"></i> اطلب مثل هذا الشغل</span>
           </div>
         </div>
 
-        <!-- 3 -->
-        <div class="gallery-item" data-category="foam" data-img="assets/images/real_foam_2.jpg" data-title="براويز ونوافذ فوم حجري">
-          <img src="assets/images/real_foam_2.jpg" alt="براويز فوم حجري" loading="lazy" />
+        <!-- 3: Real Villa GRC Finish -->
+        <div class="gallery-item" data-category="grc" data-img="assets/images/real_site_after.jpg" data-title="واجهة فيلا كاملة بعد اكتمال تشطيب GRC">
+          <img src="assets/images/real_site_after.jpg" alt="واجهة فيلا كاملة GRC" loading="lazy" />
           <div class="gallery-overlay">
-            <span class="gallery-badge">فوم حجري حديث</span>
-            <h4 class="gallery-title">إطارات وبراويز فوم حجري للنوافذ</h4>
-            <span class="gallery-cta"><i class="fa-brands fa-whatsapp"></i> اطلب مثل هذا التصميم</span>
+            <span class="gallery-badge badge-grc">جي ار سي GRC واقعي</span>
+            <h4 class="gallery-title">واجهة فيلا متكاملة بعد تشطيب GRC</h4>
+            <span class="gallery-cta"><i class="fa-brands fa-whatsapp"></i> اطلب مثل هذا الشغل</span>
           </div>
         </div>
 
-        <!-- 4 -->
-        <div class="gallery-item" data-category="stone" data-img="assets/images/stone_alt_1.jpg" data-title="تكسية واجهة بديل الحجر الطبيعي">
-          <img src="assets/images/stone_alt_1.jpg" alt="بديل الحجر الطبيعي" loading="lazy" />
+        <!-- 4: Real GRC Ornaments & Cornices -->
+        <div class="gallery-item" data-category="grc" data-img="assets/images/real_site_ornaments.jpg" data-title="كرانيش وبراويز نوافذ وزخارف GRC دقيقة">
+          <img src="assets/images/real_site_ornaments.jpg" alt="كرانيش وزخارف GRC واقعية" loading="lazy" />
           <div class="gallery-overlay">
-            <span class="gallery-badge">بديل الحجر</span>
-            <h4 class="gallery-title">تكسية جدارية ببديل الحجر الطبيعي</h4>
-            <span class="gallery-cta"><i class="fa-brands fa-whatsapp"></i> اطلب مثل هذا التصميم</span>
+            <span class="gallery-badge badge-grc">ديكورات GRC واقعية</span>
+            <h4 class="gallery-title">كرانيش وبراويز نوافذ وزخارف معمارية</h4>
+            <span class="gallery-cta"><i class="fa-brands fa-whatsapp"></i> اطلب مثل هذا الشغل</span>
           </div>
         </div>
 
-        <!-- 5 -->
-        <div class="gallery-item" data-category="decor" data-img="assets/images/facade_decor_1.jpg" data-title="تيجان وأعمدة وكرانيش معمارية">
-          <img src="assets/images/facade_decor_1.jpg" alt="تيجان وأعمدة وكرانيش" loading="lazy" />
+        <!-- 5: Real Villa Facade Details -->
+        <div class="gallery-item" data-category="grc" data-img="assets/images/real_grc_2.jpg" data-title="تشطيب واجهة فيلا ببراويز وكرانيش خارجية">
+          <img src="assets/images/real_grc_2.jpg" alt="واجهة فيلا GRC حقيقية" loading="lazy" />
           <div class="gallery-overlay">
-            <span class="gallery-badge">ديكورات وتيجان</span>
-            <h4 class="gallery-title">كرانيش وتيجان أعمدة وزخارف واجهات</h4>
-            <span class="gallery-cta"><i class="fa-brands fa-whatsapp"></i> اطلب مثل هذا التصميم</span>
+            <span class="gallery-badge badge-grc">جي ار سي GRC</span>
+            <h4 class="gallery-title">واجهة فيلا بكرانيش وبراويز خارجية</h4>
+            <span class="gallery-cta"><i class="fa-brands fa-whatsapp"></i> اطلب مثل هذا الشغل</span>
           </div>
         </div>
 
-        <!-- 6 -->
-        <div class="gallery-item" data-category="grc" data-img="assets/images/grc_villa_1.jpg" data-title="واجهة فيلا مودرن بالجي ار سي">
-          <img src="assets/images/grc_villa_1.jpg" alt="واجهة فيلا جي ار سي" loading="lazy" />
+        <!-- 6: Real Villa Completed -->
+        <div class="gallery-item" data-category="grc" data-img="assets/images/real_site_villa_after.jpg" data-title="واجهة فيلا سكنية بعد انتهاء أعمال الواجهات">
+          <img src="assets/images/real_site_villa_after.jpg" alt="واجهة فيلا مكتملة" loading="lazy" />
           <div class="gallery-overlay">
-            <span class="gallery-badge">جي ار سي GRC</span>
-            <h4 class="gallery-title">واجهة فيلا مودرن بالـ GRC</h4>
-            <span class="gallery-cta"><i class="fa-brands fa-whatsapp"></i> اطلب مثل هذا التصميم</span>
+            <span class="gallery-badge badge-grc">واجهات فلل واقعية</span>
+            <h4 class="gallery-title">واجهة فيلا سكنية بعد اكتمال التشطيب</h4>
+            <span class="gallery-cta"><i class="fa-brands fa-whatsapp"></i> اطلب مثل هذا الشغل</span>
           </div>
         </div>
 
-        <!-- 7 -->
-        <div class="gallery-item" data-category="decor" data-img="assets/images/foam_decor_1.jpg" data-title="ديكورات جدارية فوم معالج">
-          <img src="assets/images/foam_decor_1.jpg" alt="ديكورات جدارية فوم" loading="lazy" />
+        <!-- 7: GRC Columns & Bases -->
+        <div class="gallery-item" data-category="grc columns" data-img="assets/images/grc_work_1.jpg" data-title="أعمدة وقواعد ومداخل جي ار سي">
+          <img src="assets/images/grc_work_1.jpg" alt="أعمدة ومداخل خرسانية GRC" loading="lazy" />
           <div class="gallery-overlay">
-            <span class="gallery-badge">ديكورات وتيجان</span>
-            <h4 class="gallery-title">ديكورات جدارية وبراويز خارجية</h4>
-            <span class="gallery-cta"><i class="fa-brands fa-whatsapp"></i> اطلب مثل هذا التصميم</span>
+            <span class="gallery-badge badge-grc">أعمدة ومداخل GRC</span>
+            <h4 class="gallery-title">أعمدة ومداخل خرسانية مسلحة GRC</h4>
+            <span class="gallery-cta"><i class="fa-brands fa-whatsapp"></i> اطلب مثل هذا الشغل</span>
           </div>
         </div>
 
-        <!-- 8 -->
-        <div class="gallery-item" data-category="grc" data-img="assets/images/grc_work_1.jpg" data-title="أعمدة وقواعد جي ار سي">
-          <img src="assets/images/grc_work_1.jpg" alt="أعمدة وقواعد جي ار سي" loading="lazy" />
+        <!-- 8: Commercial GRC Project -->
+        <div class="gallery-item" data-category="grc" data-img="assets/images/commercial.jpg" data-title="مشروع تكسية مبنى ومعرض تجاري بخامة GRC">
+          <img src="assets/images/commercial.jpg" alt="مشروع تجاري GRC" loading="lazy" />
           <div class="gallery-overlay">
-            <span class="gallery-badge">جي ار سي GRC</span>
-            <h4 class="gallery-title">أعمدة وقواعد ومداخل جي ار سي</h4>
-            <span class="gallery-cta"><i class="fa-brands fa-whatsapp"></i> اطلب مثل هذا التصميم</span>
+            <span class="gallery-badge badge-grc">مشاريع تجارية GRC</span>
+            <h4 class="gallery-title">تكسية مبنى ومعرض تجاري بخامة GRC</h4>
+            <span class="gallery-cta"><i class="fa-brands fa-whatsapp"></i> اطلب مثل هذا الشغل</span>
           </div>
         </div>
 
@@ -343,22 +657,136 @@
   </section>
 
   <!-- ═══════════════════════════════════════════
-       DIRECT CONTACT SECTION (Pure, Fast, No Fluff)
+       SECTION 5: INTERACTIVE PRICE ESTIMATOR & QUOTE REQUEST
+  ════════════════════════════════════════════ -->
+  <section class="section section-calculator" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge badge-calc"><i class="fa-solid fa-calculator"></i> تسعير فوري ومباشر</span>
+        <h2 class="section-title">احسب واطلب سعر مشروعك في دقيقة واحدة</h2>
+        <p class="section-desc">حدد خياراتك بالأسفل بضغطة زر واحدة، وهيتم تجهيز رسالة مقايسة مخصصة ترسلها للمهندس على واتساب فوراً ليوافيك بالتكلفة والمقايسة الدقيقة.</p>
+      </div>
+
+      <div class="calculator-card">
+        <!-- Step 1: Material Selection -->
+        <div class="calc-step">
+          <label class="calc-label"><span class="step-num">1</span> اختر نوع الخامة المطلوبة:</label>
+          <div class="calc-options-grid" id="opt-material">
+            <button type="button" class="calc-chip active" data-value="جي ار بي (GRP) فايبر جلاس">
+              <i class="fa-solid fa-layer-group"></i>
+              <span>جي ار بي GRP (فايبر جلاس)</span>
+            </button>
+            <button type="button" class="calc-chip" data-value="جي ار سي (GRC) خرسانة مسلحة">
+              <i class="fa-solid fa-building-columns"></i>
+              <span>جي ار سي GRC (خرسانة مسلحة)</span>
+            </button>
+            <button type="button" class="calc-chip" data-value="GRP و GRC معاً">
+              <i class="fa-solid fa-cubes"></i>
+              <span>كلاهما معاً (تكسيات وزخارف)</span>
+            </button>
+            <button type="button" class="calc-chip" data-value="استشارة لتحديد الأنسب">
+              <i class="fa-solid fa-circle-question"></i>
+              <span>أحتاج استشارة لتحديد الأنسب</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: Project Type -->
+        <div class="calc-step">
+          <label class="calc-label"><span class="step-num">2</span> نوع المشروع أو المبنى:</label>
+          <div class="calc-options-grid" id="opt-project">
+            <button type="button" class="calc-chip active" data-value="فيلا سكنية خاصة">
+              <i class="fa-solid fa-house"></i>
+              <span>فيلا سكنية</span>
+            </button>
+            <button type="button" class="calc-chip" data-value="قصر أو استراحة فاخرة">
+              <i class="fa-solid fa-landmark"></i>
+              <span>قصر أو استراحة</span>
+            </button>
+            <button type="button" class="calc-chip" data-value="مبنى تجاري / معرض / فندق">
+              <i class="fa-solid fa-briefcase"></i>
+              <span>مبنى تجاري أو فندق</span>
+            </button>
+            <button type="button" class="calc-chip" data-value="واجهة خاصة / مدخل">
+              <i class="fa-solid fa-door-open"></i>
+              <span>واجهة خاصة أو مدخل</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 3: Elements Needed -->
+        <div class="calc-step">
+          <label class="calc-label"><span class="step-num">3</span> ما هي العناصر التي ترغب بتنفيذها؟</label>
+          <div class="calc-options-grid" id="opt-elements">
+            <button type="button" class="calc-chip active" data-value="واجهات خارجية كاملة">
+              <i class="fa-solid fa-vector-square"></i>
+              <span>واجهات خارجية كاملة</span>
+            </button>
+            <button type="button" class="calc-chip" data-value="أعمدة وتيجان وبوابات">
+              <i class="fa-solid fa-archway"></i>
+              <span>أعمدة وتيجان وبوابات</span>
+            </button>
+            <button type="button" class="calc-chip" data-value="براويز نوافذ وكرانيش">
+              <i class="fa-solid fa-border-all"></i>
+              <span>براويز نوافذ وكرانيش</span>
+            </button>
+            <button type="button" class="calc-chip" data-value="تكسيات جدارية وديكورات">
+              <i class="fa-solid fa-palette"></i>
+              <span>تكسيات جدارية وديكورات</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 4: Area & City Inputs -->
+        <div class="calc-step calc-inputs-row">
+          <div class="calc-input-group">
+            <label for="input-area" class="calc-label"><span class="step-num">4</span> المساحة التقريبية (متر مربع - اختياري):</label>
+            <input type="number" id="input-area" placeholder="مثال: 350" min="1" class="calc-input" />
+          </div>
+
+          <div class="calc-input-group">
+            <label for="input-city" class="calc-label"><span class="step-num">5</span> مدينتك في المملكة:</label>
+            <input type="text" id="input-city" placeholder="حائل، الرياض، جدة، القصيم..." value="حائل" class="calc-input" />
+          </div>
+        </div>
+
+        <!-- Dynamic Summary Preview -->
+        <div class="calc-summary-preview">
+          <div class="summary-label"><i class="fa-solid fa-clipboard-check"></i> ملخص طلبك المخصص:</div>
+          <div class="summary-content" id="calc-summary-text">
+            طلب تسعير: <strong>جي ار بي (GRP) فايبر جلاس</strong> لمشروع: <strong>فيلا سكنية خاصة</strong> — العناصر: <strong>واجهات خارجية كاملة</strong> — المدينة: <strong>حائل</strong>.
+          </div>
+        </div>
+
+        <!-- Action Button (Instant WhatsApp Dispatch) -->
+        <div class="calc-action-wrap">
+          <a href="#" id="btn-submit-quote" class="btn-submit-quote">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>إرسال طلب السعر والمقايسة فوراً عبر واتساب</span>
+          </a>
+          <span class="calc-hint"><i class="fa-solid fa-shield-check"></i> استشارة ومعاينة مجانية — الرد فوري ومباشر من المهندس</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       DIRECT CONTACT SECTION
   ════════════════════════════════════════════ -->
   <section class="direct-contact-section" id="contact">
     <div class="container">
       <div class="contact-box">
-        <h2>تواصل معنا مباشرة الآن</h2>
-        <p>نحن جاهزون لمعاينة موقعك وتقديم الاستشارة والمقايسة وعرض السعر فوراً</p>
+        <h2>تواصل معنا مباشرة الآن — فريقنا جاهز لخدمتك</h2>
+        <p>نحن على أتم الاستعداد لمعاينة موقعك، دراسة المخطط الهندسي، وتقديم الاستشارة والمقايسة المبدئية فوراً.</p>
 
         <div class="contact-cards-row">
 
           <!-- WhatsApp Card -->
-          <a href="https://wa.me/966501910554?text=مرحباً، أود الاستفسار عن أعمال الواجهات" target="_blank" class="contact-card-btn wa-card">
+          <a href="https://wa.me/966501910554?text=مرحباً شركة اسوار الكنانة، أود الاستفسار وطلب سعر لأعمال GRP و GRC" target="_blank" class="contact-card-btn wa-card">
             <i class="fa-brands fa-whatsapp contact-icon-large"></i>
             <div class="contact-btn-text">
               <span class="contact-btn-label">مراسلة واتساب فورية (متاح 24/7)</span>
-              <span class="contact-btn-num"><bdi class="phone-num">+966 50 191 0554</bdi></span>
+              <span class="contact-btn-num"><bdi class="phone-num">0501910554</bdi></span>
             </div>
           </a>
 
@@ -367,15 +795,15 @@
             <i class="fa-solid fa-phone-volume contact-icon-large"></i>
             <div class="contact-btn-text">
               <span class="contact-btn-label">اتصال هاتفي مباشر</span>
-              <span class="contact-btn-num"><bdi class="phone-num">+966 50 191 0554</bdi></span>
+              <span class="contact-btn-num"><bdi class="phone-num">0501910554</bdi></span>
             </div>
           </a>
 
         </div>
 
-        <p style="font-size:0.92rem; color:#cbd5e1; margin-bottom:0;">
-          <i class="fa-solid fa-location-dot" style="color:#facc15; margin-left:6px;"></i>
-          المقر: حائل — حي المحطة، ونقوم بتنفيذ المشاريع في كافة مناطق المملكة (الرياض، جدة، مكة، الدمام، القصيم، والمدينة)
+        <p style="font-size:0.95rem; color:#cbd5e1; margin-bottom:0;">
+          <i class="fa-solid fa-location-dot" style="color:#d4af37; margin-left:6px;"></i>
+          المقر: حائل — حي المحطة، ونقوم بتنفيذ المشاريع وتوريد الأعمال لكافة مناطق المملكة (الرياض، جدة، مكة، الدمام، القصيم، والمدينة).
         </p>
       </div>
     </div>
@@ -418,43 +846,116 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-company-name">شركة اسوار الكنانة للمقاولات العامة</div>
-      <div class="footer-cr">سجل تجاري رقم: 3133277033 | متخصصون في الفوم الحجري الحديث والـ GRC وبديل الحجر</div>
+      <div class="footer-cr">سجل تجاري رقم: 3133277033 | متخصصون في تكسيات وديكورات GRP و GRC والواجهات المعمارية</div>
       <div class="footer-copy">
-        جميع الحقوق محفوظة © 2026 شركة اسوار الكنانة للمقاولات العامة | للتواصل المباشر: <bdi class="phone-num" style="color:#facc15; font-weight:700;">+966 50 191 0554</bdi>
+        جميع الحقوق محفوظة © 2026 شركة اسوار الكنانة للمقاولات العامة | للتواصل المباشر: <bdi class="phone-num" style="color:#d4af37; font-weight:700;">+966 50 191 0554</bdi>
       </div>
     </div>
   </footer>
 
   <!-- ═══════════════════════════════════════════
-       STICKY BOTTOM BAR (Like decor-foom-grc)
+       STICKY BOTTOM BAR (Mobile Only)
   ════════════════════════════════════════════ -->
   <div class="sticky-bottom-bar">
     <a href="tel:+966501910554" class="sticky-btn sticky-btn-call">
       <i class="fa-solid fa-phone"></i>
-      <bdi class="phone-num">+966 50 191 0554</bdi>
+      <bdi class="phone-num">0501910554</bdi>
     </a>
-    <a href="https://wa.me/966501910554?text=مرحباً شركة اسوار الكنانة، أرغب بالاستفسار عن خدمات الواجهات" target="_blank" class="sticky-btn sticky-btn-wa">
+    <a href="https://wa.me/966501910554?text=مرحباً شركة اسوار الكنانة، أرغب بالاستفسار عن خدمات وأسعار GRP و GRC" target="_blank" class="sticky-btn sticky-btn-wa">
       <i class="fa-brands fa-whatsapp"></i>
-      <bdi class="phone-num">+966 50 191 0554</bdi>
+      <span>واتساب فوري</span>
     </a>
   </div>
 
   <!-- ═══════════════════════════════════════════
-       MODAL (Official Documents & Image Preview)
+       FLOATING WHATSAPP BUTTON (Desktop & Tablet)
+  ════════════════════════════════════════════ -->
+  <a href="https://wa.me/966501910554?text=مرحباً شركة اسوار الكنانة، أود الاستفسار وطلب سعر لأعمال GRP و GRC" target="_blank" class="floating-wa-btn" title="تواصل واتساب مباشر">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="floating-wa-text">اطلب سعرك واتساب</span>
+  </a>
+
+  <!-- ═══════════════════════════════════════════
+       MODAL 1: PREVIEW (Official Docs & Image Zoom)
   ════════════════════════════════════════════ -->
   <div class="modal-overlay" id="preview-modal">
     <div class="modal-card">
-      <button class="modal-close-btn" id="modal-close">&times;</button>
-      <h3 id="modal-heading" style="font-family:var(--font-heading); margin-bottom:0.75rem; color:var(--text-dark);">الوثائق الرسمية</h3>
+      <button class="modal-close-btn" id="modal-close" aria-label="إغلاق">&times;</button>
+      <h3 id="modal-heading" style="font-family:var(--font-heading); margin-bottom:0.75rem; color:var(--text-dark);">معاينة</h3>
       <div class="modal-img-wrap">
-        <img id="modal-image" src="assets/docs/address_proof.png" alt="وثيقة رسمية" />
+        <img id="modal-image" src="assets/docs/address_proof.png" alt="معاينة" />
       </div>
       <p id="modal-desc" style="font-size:0.9rem; color:var(--text-muted); margin-bottom:1rem;">
-        إثبات العنوان الوطني المعتمد — رقم الإثبات: 1088401155 | الرمز البريدي: 55424 حائل
+        بيانات وتفاصيل المعاينة.
       </p>
-      <div style="display:flex; justify-content:flex-end;">
-        <a href="https://wa.me/966501910554" target="_blank" class="btn-card-wa" style="padding:0.6rem 1.25rem;">
-          <i class="fa-brands fa-whatsapp"></i> تواصل مع الشركة
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+        <span style="font-size:0.85rem; color:var(--text-muted);">شركة اسوار الكنانة للمقاولات العامة</span>
+        <a id="modal-wa-btn" href="https://wa.me/966501910554" target="_blank" class="btn-card-wa" style="padding:0.6rem 1.25rem;">
+          <i class="fa-brands fa-whatsapp"></i> اطلب مثل هذا الشغل
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       MODAL 2: INTERACTIVE VIDEO SHOWCASE PLAYER
+  ════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="video-modal">
+    <div class="modal-card video-modal-card">
+      <button class="modal-close-btn" id="video-modal-close" aria-label="إغلاق">&times;</button>
+      
+      <div class="video-modal-header">
+        <div class="video-tabs">
+          <button class="video-tab-btn active" data-video-type="grp">
+            <i class="fa-solid fa-layer-group"></i> فيديو تركيب خامة GRP
+          </button>
+          <button class="video-tab-btn" data-video-type="grc">
+            <i class="fa-solid fa-building-columns"></i> فيديو تركيب واجهات GRC
+          </button>
+        </div>
+      </div>
+
+      <div class="video-player-container">
+        <!-- Interactive Simulated Video Walkthrough Player -->
+        <div class="video-screen" id="video-screen">
+          <img id="video-current-frame" src="assets/images/real_site_facade_1.jpg" alt="إطار الفيديو" />
+          
+          <div class="video-watermark">
+            <img src="assets/logo.png" alt="اسوار الكنانة" />
+            <span>شركة اسوار الكنانة | توثيق ميداني حي</span>
+          </div>
+
+          <div class="video-play-center" id="video-play-center">
+            <i class="fa-solid fa-play"></i>
+          </div>
+
+          <!-- Video Progress & Controls Bar -->
+          <div class="video-controls-bar">
+            <button class="ctrl-btn" id="ctrl-play-btn"><i class="fa-solid fa-play"></i></button>
+            <div class="ctrl-time-bar">
+              <div class="ctrl-progress-fill" id="ctrl-progress"></div>
+            </div>
+            <span class="ctrl-time-text" id="ctrl-time">00:00 / 01:30</span>
+            <button class="ctrl-btn" id="ctrl-sound-btn"><i class="fa-solid fa-volume-high"></i></button>
+          </div>
+        </div>
+
+        <div class="video-details-box">
+          <h4 id="video-modal-title">فيديو توضيحي من موقع العمل: طريقة تثبيت وتركيب تكسيات GRP</h4>
+          <p id="video-modal-desc">
+            يوضح هذا المقطع الميداني خصائص ألواح الفايبر جلاس (GRP) وخفتها العالية وسهولة رفعها وتثبيتها الميكانيكي على الهياكل والواجهات بدون مجهود وبدون أي وزن إضافي على المبنى.
+          </p>
+        </div>
+      </div>
+
+      <div class="video-modal-footer">
+        <div class="video-footer-tip">
+          <i class="fa-solid fa-video" style="color:var(--accent-gold);"></i>
+          <span>عايز مقاطع فيديو حية إضافية من مواقع العمل الحالية؟</span>
+        </div>
+        <a href="https://wa.me/966501910554?text=مرحباً شركة اسوار الكنانة، أرغب بمشاهدة مقاطع فيديو حية من مشاريعكم ومواقع تركيب الـ GRP والـ GRC" target="_blank" class="btn-request-live-video">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>اطلب فيديو حي من موقع العمل عبر واتساب</span>
         </a>
       </div>
     </div>
