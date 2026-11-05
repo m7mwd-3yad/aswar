@@ -188,97 +188,49 @@ document.addEventListener('DOMContentLoaded', () => {
   updateQuoteSummary();
 
   /* ═══════════════════════════════════════════
-     5. INTERACTIVE VIDEO SHOWCASE PLAYER MODAL
+     5. VIDEO MODAL — YouTube Link Cards
   ════════════════════════════════════════════ */
   const videoModal = document.getElementById('video-modal');
   const videoModalClose = document.getElementById('video-modal-close');
   const btnPlayGrpVideo = document.getElementById('btn-play-grp-video');
   const btnPlayGrcVideo = document.getElementById('btn-play-grc-video');
   const videoTabBtns = document.querySelectorAll('.video-tab-btn');
-  const videoCurrentFrame = document.getElementById('video-current-frame');
-  const videoPlayCenter = document.getElementById('video-play-center');
-  const ctrlPlayBtn = document.getElementById('ctrl-play-btn');
-  const ctrlProgress = document.getElementById('ctrl-progress');
-  const ctrlTime = document.getElementById('ctrl-time');
-  const ctrlSoundBtn = document.getElementById('ctrl-sound-btn');
+  const ytThumbImg = document.getElementById('yt-thumb-img');
+  const ytWatchLink = document.getElementById('yt-watch-link');
   const videoTitle = document.getElementById('video-modal-title');
   const videoDesc = document.getElementById('video-modal-desc');
 
+  // YouTube search URLs — يفتح بحث يوتيوب مباشر في تاب جديد
   const videoData = {
     grp: {
-      frame: 'assets/images/real_site_facade_1.jpg',
-      title: 'فيديو توضيحي من موقع العمل: طريقة تثبيت وتركيب تكسيات GRP',
-      desc: 'يوضح هذا المقطع الميداني خصائص ألواح الفايبر جلاس (GRP) وخفتها العالية وسهولة رفعها وتثبيتها الميكانيكي على الهياكل والواجهات بدون مجهود وبدون أي وزن إضافي على المبنى.'
+      thumb: 'assets/images/grp_new_1.jpg',
+      ytUrl: 'https://www.youtube.com/results?search_query=%D8%AA%D8%B1%D9%83%D9%8A%D8%A8+%D9%88%D8%A7%D8%AC%D9%87%D8%A7%D8%AA+GRP+%D9%81%D8%A7%D9%8A%D8%A8%D8%B1+%D8%AC%D9%84%D8%A7%D8%B3+%D9%85%D8%B9%D9%85%D8%A7%D8%B1%D9%8A',
+      title: 'فيديوهات توضيحية: أعمال خامة GRP (الفايبر جلاس المعماري)',
+      desc: 'اضغط "مشاهدة على YouTube" لتجد مئات المقاطع التي توضح كيف تُصنَّع وتُركَّب ألواح GRP الفايبر جلاس — خفيفة الوزن، مقاومة تامة للرطوبة، وتشطيب انسيابي فاخر.'
     },
     grc: {
-      frame: 'assets/images/real_site_columns.jpg',
-      title: 'فيديو توضيحي: طريقة تثبيت وتركيب ألواح وزخارف وأعمدة الـ GRC',
-      desc: 'شاهد في هذا المقطع طريقة تثبيت ألواح وكرانيش وأعمدة الـ GRC بنظام التثبيت الميكانيكي بالحديد المجلفن، وكيف تمنح الواجهة صلابة صخرية ونقوشاً إسلامية وكلاسيكية فائقة الفخامة والدقة.'
+      thumb: 'assets/images/real_site_columns.jpg',
+      ytUrl: 'https://www.youtube.com/results?search_query=%D9%88%D8%A7%D8%AC%D9%87%D8%A7%D8%AA+GRC+%D8%AE%D8%B1%D8%B3%D8%A7%D9%86%D8%A9+%D9%85%D8%B3%D9%84%D8%AD%D8%A9+%D8%A8%D8%A7%D9%84%D8%A7%D9%84%D9%8A%D8%A7%D9%81+%D9%81%D9%84%D9%84+%D9%88%D9%82%D8%B5%D9%88%D8%B1',
+      title: 'فيديوهات توضيحية: أعمال خامة GRC (الخرسانة المسلحة بالألياف)',
+      desc: 'اضغط "مشاهدة على YouTube" لتجد مقاطع تُظهر مراحل تصنيع وتركيب GRC على واجهات الفلل والقصور — صلابة صخرية، زخارف دقيقة، وعمر افتراضي يتجاوز 50 عاماً.'
     }
   };
 
   let currentVideoType = 'grp';
-  let isPlaying = false;
-  let playInterval = null;
-  let progressPercent = 0;
 
   function setVideoType(type) {
     currentVideoType = type;
     const data = videoData[type];
     if (!data) return;
 
-    if (videoCurrentFrame) videoCurrentFrame.src = data.frame;
+    if (ytThumbImg) ytThumbImg.src = data.thumb;
+    if (ytWatchLink) ytWatchLink.href = data.ytUrl;
     if (videoTitle) videoTitle.textContent = data.title;
     if (videoDesc) videoDesc.textContent = data.desc;
 
     videoTabBtns.forEach(btn => {
       btn.classList.toggle('active', btn.dataset.videoType === type);
     });
-
-    pauseVideo();
-    progressPercent = 0;
-    updateProgressUI();
-  }
-
-  function playVideo() {
-    isPlaying = true;
-    if (videoPlayCenter) videoPlayCenter.style.display = 'none';
-    if (ctrlPlayBtn) ctrlPlayBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
-
-    if (playInterval) clearInterval(playInterval);
-    playInterval = setInterval(() => {
-      progressPercent += 1.5;
-      if (progressPercent >= 100) {
-        progressPercent = 0;
-        pauseVideo();
-      }
-      updateProgressUI();
-    }, 200);
-  }
-
-  function pauseVideo() {
-    isPlaying = false;
-    if (playInterval) clearInterval(playInterval);
-    if (videoPlayCenter) videoPlayCenter.style.display = 'flex';
-    if (ctrlPlayBtn) ctrlPlayBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
-  }
-
-  function togglePlay() {
-    if (isPlaying) {
-      pauseVideo();
-    } else {
-      playVideo();
-    }
-  }
-
-  function updateProgressUI() {
-    if (ctrlProgress) ctrlProgress.style.width = `${progressPercent}%`;
-    const totalSec = 90;
-    const curSec = Math.floor((progressPercent / 100) * totalSec);
-    const curMin = Math.floor(curSec / 60);
-    const remSec = curSec % 60;
-    const curStr = `${String(curMin).padStart(2, '0')}:${String(remSec).padStart(2, '0')}`;
-    if (ctrlTime) ctrlTime.textContent = `${curStr} / 01:30`;
   }
 
   function openVideoModal(type = 'grp') {
@@ -286,12 +238,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (videoModal) {
       videoModal.classList.add('active');
       document.body.style.overflow = 'hidden';
-      playVideo();
     }
   }
 
   function closeVideoModal() {
-    pauseVideo();
     if (videoModal) {
       videoModal.classList.remove('active');
       document.body.style.overflow = '';
@@ -302,16 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
   btnPlayGrcVideo?.addEventListener('click', () => openVideoModal('grc'));
 
   videoTabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      setVideoType(btn.dataset.videoType);
-    });
-  });
-
-  videoPlayCenter?.addEventListener('click', togglePlay);
-  ctrlPlayBtn?.addEventListener('click', togglePlay);
-  ctrlSoundBtn?.addEventListener('click', () => {
-    const isMuted = ctrlSoundBtn.innerHTML.includes('slash');
-    ctrlSoundBtn.innerHTML = isMuted ? '<i class="fa-solid fa-volume-high"></i>' : '<i class="fa-solid fa-volume-xmark"></i>';
+    btn.addEventListener('click', () => setVideoType(btn.dataset.videoType));
   });
 
   videoModalClose?.addEventListener('click', closeVideoModal);
