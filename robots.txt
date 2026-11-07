@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aswar.nasl-al-amal-co.com/sitemap.xml
